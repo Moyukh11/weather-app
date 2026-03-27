@@ -25,10 +25,11 @@ async function getWeather(city) {
   }
 }
 
-// 📍 GET WEATHER BY LOCATION (NEW 🔥)
+// 📍 GET WEATHER BY LOCATION
 function getLocationWeather() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(async position => {
+
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
 
@@ -46,28 +47,38 @@ function getLocationWeather() {
 
     }, () => {
       // fallback
-      getWeather("Kolkata");
+      getWeather("Mumbai");
     });
   } else {
-    getWeather("Kolkata");
+    getWeather("Mumbai");
   }
 }
 
-// 🎯 UPDATE UI (COMMON FUNCTION)
+// 🎯 UPDATE UI
 function updateUI(data, forecast) {
 
+  // BASIC INFO
   document.getElementById("city").innerText = data.name;
   document.getElementById("temp").innerText = Math.round(data.main.temp) + "°";
   document.getElementById("desc").innerText = data.weather[0].description;
   document.getElementById("wind").innerText = data.wind.speed + " km/h";
   document.getElementById("humidity").innerText = data.main.humidity + "%";
 
-  // 🌦️ ICON FROM API (NEW)
+  // 🌦️ ICON FROM API
   const iconCode = data.weather[0].icon;
   document.getElementById("weatherIcon").src =
     `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-  // ⏱️ HOURLY (3 CARDS)
+  // ☀️ SUNLIGHT HOURS (FIXED 🔥)
+  const sunrise = data.sys.sunrise;
+  const sunset = data.sys.sunset;
+
+  const daylightHours = (sunset - sunrise) / 3600;
+  const sunHours = daylightHours.toFixed(1);
+
+  document.getElementById("sun").innerText = sunHours + " hr";
+
+  // ⏱️ HOURLY (ONLY 3 CARDS)
   const hourly = document.getElementById("hourly");
   hourly.innerHTML = "";
 
