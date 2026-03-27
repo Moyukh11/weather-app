@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SEARCH -->
+  <div class="top">
+    <input type="text" id="searchInput" placeholder="Search city...">
+  </div>
+
+  <!-- CITY -->
+  <p id="city">Mumbai</p>
+
+  <!-- ICON -->
+  <div class="icon">
+    <img id="weatherIcon" src="assets/icons/clear.png">
+  </div>
+
+  <!-- TEMP -->
+  <h1 id="temp">--°</h1>
+  <p id="desc">Loading...</p>
+
+  <!-- INFO -->
+  <div class="info">
+    <div>🌬️ <span id="wind">--</span></div>
+    <div>💧 <span id="humidity">--</span></div>
+    <div>☀️ <span id="sun">8 hr</span></div>
+  </div>
+
+  <!-- HOURLY -->
+  <h3>Hourly Forecast</h3>
+  <div class="hourly" id="hourly"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
