@@ -25,34 +25,45 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start; /* 🔥 keeps content at top */
 }
 
-/* SEARCH */
+/* 🔍 TOP SEARCH (CENTERED + EQUAL MARGIN) */
 .top {
   width: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding: 0 20px;   /* 🔥 equal left & right spacing */
+  box-sizing: border-box;
+
+  margin-bottom: 15px;
 }
 
 .top input {
   width: 100%;
   padding: 12px;
-  border-radius: 15px;
+
+  border-radius: 20px;
   border: none;
   outline: none;
 
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.15);
   color: white;
+  text-align: center;
 }
 
 .top input::placeholder {
   color: #ccc;
 }
 
-/* TEXT */
+/* CITY */
 #city {
   font-size: clamp(16px, 4vw, 22px);
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
+/* TEMP */
 h1 {
   font-size: clamp(40px, 10vw, 60px);
   margin: 10px 0;
