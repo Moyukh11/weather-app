@@ -47,10 +47,10 @@ function getLocationWeather() {
 
     }, () => {
       // fallback
-      getWeather("Mumbai");
+      getWeather("Kolkata");
     });
   } else {
-    getWeather("Mumbai");
+    getWeather("Kolkata");
   }
 }
 
