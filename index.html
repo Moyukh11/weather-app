@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <title>Weather App</title>
+
+  <!-- ✅ IMPORTANT FOR RESPONSIVE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,11 +18,11 @@
   </div>
 
   <!-- CITY -->
-  <p id="city">Kolkata</p>
+  <p id="city">Mumbai</p>
 
   <!-- ICON -->
   <div class="icon">
-    <img id="weatherIcon" src="assets/icons/clear.png">
+    <img id="weatherIcon" src="">
   </div>
 
   <!-- TEMP -->
@@ -26,12 +30,12 @@
   <p id="desc">Loading...</p>
 
   <!-- INFO -->
- <div class="info">
-  <div>🌬️ <span id="wind">--</span></div>
-  <div>💧 <span id="humidity">--</span></div>
-  <div>☀️ <span id="sun">--</span></div>
-</div>
-  
+  <div class="info">
+    <div>🌬️ <span id="wind">--</span></div>
+    <div>💧 <span id="humidity">--</span></div>
+    <div>☀️ <span id="sun">--</span></div>
+  </div>
+
   <!-- HOURLY -->
   <h3>Hourly Forecast</h3>
   <div class="hourly" id="hourly"></div>
