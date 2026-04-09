@@ -5,13 +5,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: radial-gradient(circle at top, #3a1c71, #000);
 }
 
+
 .app {
-  width: 320px;
-  height: 600px;
+  width: 90%;
+  max-width: 400px;
+  min-height: 90vh;
   border-radius: 30px;
   padding: 20px;
   background: rgba(255,255,255,0.05);
@@ -21,63 +23,99 @@ body {
   align-items: center;
 }
 
-/* SEARCH */
+
 .top {
   width: 100%;
 }
 
 .top input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border-radius: 15px;
   border: none;
   outline: none;
   background: rgba(255,255,255,0.1);
   color: white;
+  font-size: 14px;
 }
 
 .top input::placeholder {
   color: #ccc;
 }
 
-/* ICON */
+
 .icon img {
-  width: 120px;
+  width: 25vw;
+  max-width: 120px;
 }
 
+
 h1 {
-  font-size: 60px;
+  font-size: 10vw;
+  max-font-size: 60px;
   margin: 10px 0;
 }
 
-/* INFO */
+
 .info {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
   margin: 15px 0;
+}
+
+.info div {
+  flex: 1;
+  text-align: center;
 }
 
 .info div p {
   margin: 0 0 5px 0;
   font-size: 12px;
-  text-align: center;
   color: #ccc;
 }
 
-/* HOURLY (CENTERED) */
+
 .hourly {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   padding: 10px 5px;
+  width: 100%;
+  overflow-x: auto;
 }
 
-/* CARDS */
+
 .hour-card {
-  width: 80px;
-  padding: 12px;
+  min-width: 70px;
+  padding: 10px;
   border-radius: 20px;
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
   text-align: center;
+  flex-shrink: 0;
+}
+
+
+@media (min-width: 600px) {
+  .app {
+    max-width: 500px;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+}
+
+
+@media (min-width: 900px) {
+  .app {
+    max-width: 600px;
+  }
+
+  .hour-card {
+    min-width: 90px;
+  }
 }
