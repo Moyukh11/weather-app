@@ -10,11 +10,11 @@ body {
   min-height: 100vh;
 }
 
-
+/* APP CONTAINER */
 .app {
   width: 100%;
   max-width: 420px;
-  min-height: 100vh;
+  min-height: 90vh;
 
   padding: 20px;
   border-radius: 25px;
@@ -28,13 +28,13 @@ body {
   justify-content: flex-start; /* 🔥 keeps content at top */
 }
 
-
+/* 🔍 TOP SEARCH (CENTERED + EQUAL MARGIN) */
 .top {
   width: 100%;
   display: flex;
   justify-content: center;
 
-  padding: 0;   /* 🔥 equal left & right spacing */
+  padding: 0 20px;   /* 🔥 equal left & right spacing */
   box-sizing: border-box;
 
   margin-bottom: 15px;
@@ -57,23 +57,24 @@ body {
   color: #ccc;
 }
 
-
+/* CITY */
 #city {
   font-size: clamp(16px, 4vw, 22px);
   margin-top: 5px;
 }
 
-
+/* TEMP */
 h1 {
   font-size: clamp(40px, 10vw, 60px);
   margin: 10px 0;
 }
 
+/* ICON */
 .icon img {
   width: clamp(80px, 20vw, 120px);
 }
 
-
+/* INFO */
 .info {
   display: flex;
   justify-content: space-between;
@@ -81,33 +82,30 @@ h1 {
   margin: 15px 0;
 }
 
-
+/* HOURLY */
 .hourly {
   display: flex;
   justify-content: space-between;
   width: 100%;
   gap: 10px;
   margin-top: 10px;
-   overflow-x: auto;
 }
 
-
+/* CARDS */
 .hour-card {
   flex: 1;
   padding: 12px;
   border-radius: 15px;
   text-align: center;
-  min-width: 80px;
-  flex: 0 0 auto;
 
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
 }
 
-
+/* MOBILE FULL SCREEN */
 @media (max-width: 480px) {
   .app {
     border-radius: 0;
     min-height: 100vh;
   }
-}
+} 
