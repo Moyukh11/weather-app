@@ -10,8 +10,11 @@ body {
 }
 
 .app {
-  width: 320px;
-  height: 600px;
+  width: 90vw;
+  max-width: 320px;
+  min-width: 280px;
+  height: auto;
+  min-height: 600px;
   border-radius: 30px;
   padding: 20px;
   background: rgba(255,255,255,0.05);
@@ -80,4 +83,53 @@ h1 {
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
   text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+  .app {
+    padding: 15px;
+    min-height: 500px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .icon img {
+    width: 100px;
+  }
+
+  .info {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .app {
+    padding: 10px;
+    min-height: 450px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .icon img {
+    width: 80px;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hourly {
+    gap: 10px;
+  }
+
+  .hour-card {
+    width: 70px;
+    padding: 10px;
+  }
 }
