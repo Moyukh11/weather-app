@@ -1,6 +1,6 @@
 const API_KEY = "74effe3e434842d64544f88ecd143313";
 
-// 🌍 GET WEATHER BY CITY
+
 async function getWeather(city) {
   try {
     const res = await fetch(
@@ -25,7 +25,7 @@ async function getWeather(city) {
   }
 }
 
-// 📍 GET WEATHER BY LOCATION
+
 function getLocationWeather() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(async position => {
@@ -54,7 +54,7 @@ function getLocationWeather() {
   }
 }
 
-// 🎯 UPDATE UI
+
 function updateUI(data, forecast) {
 
   // BASIC INFO
@@ -64,12 +64,11 @@ function updateUI(data, forecast) {
   document.getElementById("wind").innerText = data.wind.speed + " km/h";
   document.getElementById("humidity").innerText = data.main.humidity + "%";
 
-  // 🌦️ ICON FROM API
+  
   const iconCode = data.weather[0].icon;
   document.getElementById("weatherIcon").src =
     `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-  // ☀️ SUNLIGHT HOURS (FIXED 🔥)
   const sunrise = data.sys.sunrise;
   const sunset = data.sys.sunset;
 
@@ -78,7 +77,6 @@ function updateUI(data, forecast) {
 
   document.getElementById("sun").innerText = sunHours + " hr";
 
-  // ⏱️ HOURLY (ONLY 3 CARDS)
   const hourly = document.getElementById("hourly");
   hourly.innerHTML = "";
 
@@ -102,7 +100,7 @@ function updateUI(data, forecast) {
   });
 }
 
-// 🔍 SEARCH
+
 const searchInput = document.getElementById("searchInput");
 
 searchInput.addEventListener("keypress", function(e) {
@@ -115,5 +113,5 @@ searchInput.addEventListener("keypress", function(e) {
   }
 });
 
-// 🚀 DEFAULT LOAD = DEVICE LOCATION
+
 getLocationWeather();
