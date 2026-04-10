@@ -1,52 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- SEARCH -->
+      <div class="top">
+        <input type="text" id="searchInput" placeholder="Search city..." />
+      </div>
 
-<div class="app">
+      <!-- CITY -->
+      <p id="city">Kolkata</p>
 
-  <!-- SEARCH -->
-  <div class="top">
-    <input type="text" id="searchInput" placeholder="Search city...">
-  </div>
+      <!-- ICON -->
+      <div class="icon">
+        <img id="weatherIcon" src="assets/icons/clear.png" />
+      </div>
 
-  <!-- CITY -->
-  <p id="city">Kolkata</p>
+      <!-- TEMP -->
+      <h1 id="temp">--°</h1>
+      <p id="desc">Loading...</p>
 
-  <!-- ICON -->
-  <div class="icon">
-    <img id="weatherIcon" src="assets/icons/clear.png">
-  </div>
+      <!-- INFO -->
+      <div class="info">
+        <div>
+          <p>Wind</p>
+          🌬️ <span id="wind">--</span>
+        </div>
+        <div>
+          <p>Humidity</p>
+          💧 <span id="humidity">--</span>
+        </div>
+        <div>
+          <p>Sunlight</p>
+          ☀️ <span id="sun">8 hr</span>
+        </div>
+      </div>
 
-  <!-- TEMP -->
-  <h1 id="temp">--°</h1>
-  <p id="desc">Loading...</p>
-
-  <!-- INFO -->
-  <div class="info">
-    <div>
-      <p>Wind</p>
-      🌬️ <span id="wind">--</span>
+      <!-- HOURLY -->
+      <h3>Hourly Forecast</h3>
+      <div class="hourly" id="hourly"></div>
     </div>
-    <div>
-      <p>Humidity</p>
-      💧 <span id="humidity">--</span>
-    </div>
-    <div>
-      <p>Sunlight</p>
-      ☀️ <span id="sun">8 hr</span>
-    </div>
-  </div>
 
-  <!-- HOURLY -->
-  <h3>Hourly Forecast</h3>
-  <div class="hourly" id="hourly"></div>
-
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
