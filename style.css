@@ -28,6 +28,7 @@ body {
   height: 100vh;
   max-width: 100vw;
   padding: 15px;
+  margin-top: clamp(40px, 8vh, 60px);
   border-radius: 0;
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(20px);
@@ -37,7 +38,6 @@ body {
   justify-content: flex-start;
   gap: 8px;
   overflow: hidden;
-  margin-top: 100px;
 }
 
 /* Mobile (small screens - up to 380px) */
