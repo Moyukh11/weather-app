@@ -28,7 +28,7 @@ body {
   height: 100vh;
   max-width: 100vw;
   padding: 15px;
-  margin-top: clamp(40px, 8vh, 60px);
+  margin-top: clamp(60px, 10vh, 80px);
   border-radius: 0;
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(20px);
